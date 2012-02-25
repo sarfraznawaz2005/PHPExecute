@@ -26,9 +26,9 @@ h1 {
    box-shadow: 0 5px 10px #AAAAAA;
    text-shadow: 0px 1px 1px #fff;
    background: none repeat scroll 0 0 #437fad;
-   border: 5px solid #66A3D2;
+   border-top: 5px solid #66A3D2;
+   border-bottom: 5px solid #66A3D2;
    color: #fff;
-   width:99%;
    line-height:30px;
    font-size: 20px;
    padding:0 0 0 5px;
@@ -52,53 +52,70 @@ h1 {
 	*/
 }
 
+.round{
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border: 1px solid #25577C;
+}
 
 #sidebar{
-	width:200px;
-	height:430px;
-	border-bottom: 5px solid #66A3D2;
-	padding: 10px;
+	width:15%;
 	background-color: #f6f6f6;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
-   box-shadow: 0 5px 10px #AAAAAA;	
+   box-shadow: 0 5px 10px #AAAAAA;
+   font-family:verdana;
 }
 
-#sidebar a.navhead {display:block;border-bottom:1px solid #66A3D2;font-size:16px; background:#25577C;letter-spacing:1px; padding:3px 0 5px 0; color:white;}
-#sidebar a.navhead:hover {color:#66A3D2;}
+#sidebar ul, #sidebar li{ margin: 0; padding: 0; }
+
+#sidebar a.navhead {font-weight:bold; display:block;border-bottom:1px solid #66A3D2;font-size:13px; background:#437fad;letter-spacing:1px; color:white; padding:5px 10px; text-align: center;}
+#sidebar a.navhead:hover {color:#333;}
 #sidebar .navlinks li {list-style:none;}
-#sidebar .navlinks a {padding: 5px;display:block;border-bottom:1px solid #25577C;background:#66A3D2;padding:3px 0;color:#000;}
-#sidebar .navlinks a:hover {background:#F7B679;}
+#sidebar .navlinks a {padding: 5px;display:block;border-bottom:1px solid #25577C;background:#66A3D2;padding:5px 10px;color:#fff;}
+#sidebar .navlinks a:hover {color:#000; }
+
+#actions{
+	padding: 5px;
+	text-align: center;
+	font-size:20px;
+	font-weight:bold;
+	color: #437fad;
+	font-family:consolas;
+}
 
 #code{
-	width:83%;
+	width:85%;
 	height:450px;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
     box-shadow: 0 5px 10px #AAAAAA;	
 	border-left: 1px solid #ccc;
-	border-bottom: 5px solid #66A3D2;
 	position: relative;
 	left:0;
 }
 
 #result{
-	width:76%;
-	margin: 10px 0 20px 270px;
+	width:82%;
+	margin: 10px 0 20px 0;
+	position: relative;
+	left:15%;
 	border: 5px solid #66A3D2;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	background-color: #f6f6f6;
 	padding: 10px;
-	overflow: auto;
 	display: none;
+	overflow: auto;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
    box-shadow: 0 5px 10px #AAAAAA;	
 }
 
 #buttons{
+	clear: both;
 	position: relative;
 	top:10px;
 	right:25px;

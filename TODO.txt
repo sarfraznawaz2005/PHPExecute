@@ -1,0 +1,2 @@
+ajax loading while running code
+snipt.net or similar integration
