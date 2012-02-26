@@ -1,11 +1,10 @@
 
-   var gEditor = null;
-
-   gEditor = ace.edit("code");
-   gEditor.setTheme("ace/theme/clouds");
+   editor = ace.edit("code");
+   editor.setShowPrintMargin(false);
+   editor.setTheme("ace/theme/clouds");
 
    var PHPMode = require("ace/mode/php").Mode;
-   gEditor.getSession().setMode(new PHPMode());
+   editor.getSession().setMode(new PHPMode());
 
 
    (function($) {
@@ -14,7 +13,7 @@
 
 
          $('#btnRun').click(function(){
-            var data = encodeURIComponent(gEditor.getSession().getValue());
+            var data = encodeURIComponent(editor.getSession().getValue());
 
             if (! data) return false;
 
@@ -114,7 +113,7 @@
                code = '';
          }
 
-         gEditor.getSession().setValue(code);
+         editor.getSession().setValue(code);
          $('#btnRun').trigger('click');
 
          return false;   
@@ -125,7 +124,7 @@
 
       // Save snippets
       $('#btnSave').click(function(){
-         var snippet = gEditor.getSession().getValue();
+         var snippet = editor.getSession().getValue();
          if (! snippet) return false;
 
          var name = prompt('Please enter snippet name');
@@ -147,7 +146,7 @@
             {
                var key = localStorage.key(i);
                var value = localStorage[key];
-               $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+               $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><div class="left">&nbsp;</div><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
             }
          }
 
@@ -170,7 +169,7 @@
             }
          }
 
-         gEditor.getSession().setValue(localStorage.getItem(key));
+         editor.getSession().setValue(localStorage.getItem(key));
          return false;
       });
 
@@ -181,7 +180,7 @@
          {
             var key = localStorage.key(i);
             var value = localStorage[key];
-            $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+            $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><div class="left">&nbsp;</div><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
          }
       }
       

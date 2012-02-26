@@ -10,7 +10,7 @@ body {
 	padding: 0 !important;
 	background:#fff !important; 
 	font-size:13px !important;
-	font-family:Consolas, Tahoma !important;
+	font-family:Consolas, verdana !important;
 }
 
 .left {float:left;}
@@ -60,12 +60,11 @@ h1 {
 }
 
 #sidebar{
-	width:15%;
+	width:14%;
 	background-color: #f6f6f6;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
    box-shadow: 0 5px 10px #AAAAAA;
-   font-family:verdana;
 }
 
 #sidebar ul, #sidebar li{ margin: 0; padding: 0; }
@@ -73,8 +72,8 @@ h1 {
 #sidebar a.navhead {font-weight:bold; display:block;border-bottom:1px solid #66A3D2;font-size:13px; background:#437fad;letter-spacing:1px; color:white; padding:5px 10px; text-align: center;}
 #sidebar a.navhead:hover {color:#333;}
 #sidebar .navlinks li {list-style:none;}
-#sidebar .navlinks a {padding: 5px;display:block;border-bottom:1px solid #25577C;background:#66A3D2;padding:5px 10px;color:#fff;}
-#sidebar .navlinks a:hover {color:#000; }
+#sidebar .navlinks a {font-size:13px;padding: 5px;display:block;border-bottom:1px solid #5994c1;background:#84b8e0;padding:5px 10px;color:#fff;}
+#sidebar .navlinks a:hover {color:#000; background:#66A3D2; }
 
 #actions{
 	padding: 5px;
@@ -86,7 +85,7 @@ h1 {
 }
 
 #code{
-	width:84%;
+	width:85%;
 	height:450px;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
@@ -111,7 +110,7 @@ h1 {
 	overflow: auto;
    -moz-box-shadow: 0 5px 10px #AAAAAA;
    -webkit-box-shadow: 0 5px 10px #AAAAAA;
-   box-shadow: 0 5px 10px #AAAAAA;	
+   box-shadow: 0 5px 10px #AAAAAA;
 }
 
 #buttons{
