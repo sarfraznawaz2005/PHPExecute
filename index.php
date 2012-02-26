@@ -16,6 +16,7 @@
             <a class="navhead" href="#">PHP Info</a>
             <ul class="navlinks">
                <li><a href="#" rel="info">PHP Info</a></li>
+               <li><a href="#" rel="server">SERVER</a></li>
                <li><a href="#" rel="ini">PHP INI</a></li>
                <li><a href="#" rel="extensions">Loaded Extensions</a></li>
                <li><a href="#" rel="path">Include Path</a></li>

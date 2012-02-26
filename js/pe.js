@@ -80,6 +80,9 @@
             case 'info' :
                code = 'phpinfo();';
                break;
+            case 'server' :
+               code = 'pr($_SERVER);';
+               break;               
             case 'ini' :
                code = 'pr(ini_get_all());';
                break;
