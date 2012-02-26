@@ -8,7 +8,7 @@ error_reporting(E_ALL | E_STRICT);
 require_once 'functions.php';
 
 # include any needed classes
-require_once 'classes/timer.php';
+require_once 'classes/PE/timer.php';
 $timer = new timer();
 
 ###########################################

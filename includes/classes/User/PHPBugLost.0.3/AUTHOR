@@ -1,0 +1,29 @@
+Thanks To:
+	* Ryan Campbell from particletree.com for his Php Quick Profiler, 
+		the first inspiration for PHP Bug Lost.
+		
+	* Sergey Ilinsky from ilinsky.com for his fantastic XMLHttpRequest.js library. 
+		Used in Ajax panel.
+		
+	* vonloesch.de for his javascript table filter function
+	
+	* Profile idea from PHP Class Profile
+	
+	
+Thanks also to this projects
+	* xn.Debug
+	* PHP_Debug
+	* FirePHP
+	
+	
+Thirt Party Bookmarklets
+	* MRI (Test CSS Selector) from westciv.com
+	* XRay from westciv.com
+	* Dom Inspector from slayeroffice.com
+	* Favelet Suite from slayeroffice.com
+	* View Selected Source, View all JS, View al vars/functions, 
+		View all CSS, View Classes and Check Img Alt from squarefree.com
+		
+		
+PHP Bug Lost by Jordifreek (at gmail.com).
+PHP Bug Lost is Open Source. Original idea from Php Quick Profiler.

@@ -1,0 +1,41 @@
+PHP Bug Lost Changelog
+
+
+* 29 January 0.3 Beta 1
+	Add. _bl_debug_on and _bl_monitor_on
+	Add. Profile Panel
+	Add. _bl_allow_ip for restrict access
+	Fix. Can't serialize some objects
+	Del. is_dir, is_file and is_executable on bl_var_type()
+	23 January 0.2 Beta 2
+	Add. Keyboard Shortcuts
+	Add. Delete _SESSION and _COOKIE vars
+	Add. Save console state
+	Add. New UI Rediseing
+	Add. Bookmarklets and JS/CSS files
+	Minor Fixes
+
+	
+* 09 January 0.2 Beta 1
+	Add. Filter Input for search
+	Add. Backtrace php errors
+	Add. Add functions to panel vars
+	Add. PHP Panel
+	Add. UI Rediseign
+	Add. Highlight (top/right corner alert) when errors
+	Add. Initial memory usage
+	Fix. Panel special vars when log an object
+	Fix. Jss/CSS Redesigned, compatibility with IE8+
+	Fix. Ajax panel sometimes don't show send params
+	Add. _bl_html_viewer
+	Del. _bl_start_mode
+	
+	
+* 01 September 0.1 Beta 2
+	Add. Monitoring options
+	Add. _bl_start_mode
+	Add. _bl_css_file and _bl_js_file
+	Add. _bl_delete_long_vars
+	Minor fixes
+	
+* 11 Agoust 2011 First Version 0.1 Beta

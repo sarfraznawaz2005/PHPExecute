@@ -1,0 +1,334 @@
+#bl_debug * {margin:0; padding:0; color:#111; z-index:100000;
+    background-color: transparent; font-size:100%; text-align:left;}
+#bl_debug a {text-decoration:none;}
+
+#bl_debug_wrap {width:95%; margin:0 auto 0; position:fixed; bottom:0;
+	margin-left:2%; margin-right:5px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:13px;
+	z-index:999999999;
+	position: fixed; left: 0px; bottom: 0px;
+}
+body > div#bl_debug_wrap{ position: fixed; left: 0px; bottom: 0px; }
+
+.bl_opacity {opacity:0.1;}
+#bl_debug span.error {color:#f00;}
+
+#bl_debug_header { padding:10px; color:#fff;
+	height:20px; overflow:hidden;
+	background: #ea0105; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea0105 1%, #ad0008 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ea0105), color-stop(100%,#ad0008)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea0105 1%,#ad0008 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea0105 1%,#ad0008 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ea0105 1%,#ad0008 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea0105', endColorstr='#ad0008',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ea0105 1%,#ad0008 100%); /* W3C */}
+
+
+/* nav menu */
+#bl_debug_menu {float:left; }
+#bl_debug_menu * {color:#fff !important;}
+#bl_debug_menu ul {overflow:hidden; list-style-type:none;}
+#bl_debug_menu li, #bl_debug_menu a {display:block; float:left;}
+#bl_debug_menu a {padding:3px; float:left; margin:0 10px;color:#fff !important; outline:none;}
+#bl_debug_menu a.bl_debug_activo, #bl_debug_toggle a {
+	background-color:#BA0106; border:1px solid #222;
+	border-radius:5px;}
+#bl_debug_menu sup {font-size:8px;}
+
+
+/* nav menu right. buttons close, opacity, maximize... etc.*/
+#bl_debug_toggle {float:right; width:250px; font-size:10px;}
+#bl_debug_toggle_buttons a {float:right; margin:0 3px; padding:2px 3px;
+	color: #fff; text-decoration:none;  outline:none;}
+#bl_debug_toggle_buttons a {text-decoration:none;}
+
+/* bookmarklets box */
+#bl_tool_box {position:absolute; bottom:40px; right:100px; width:460px;
+    height:400px; border:3px solid #E80005; background-color:#fff;
+    border-bottom:none; overflow:auto; overflow:hidden; opacity:0.9}
+#bl_debug_toggle #bl_tool_box a {background:none; border:none; text-decoration:none;}
+#bl_debug_toggle #bl_tool_box a {color:#f33; font-size:12px;}
+    #bl_debug_toggle #bl_tool_box a:hover {color:#f00; text-decoration:underline}
+#bl_debug_toggle #bl_tool_box ul {list-style-type:none; margin-bottom:10px;}
+#bl_debug_toggle #bl_tool_box h3 {margin-bottom:5px; font-size:14px;}
+#bl_js_css {width:200px; float:left;
+    border-left:1px solid #ccc; padding:15px}
+#bl_bookmarks {width:200px; float:left; padding:10px}
+
+
+/* panel wrapper */
+.bl_half_panel {height:300px;}
+.bl_close_panel {height:0; display:none;}
+.bl_full_panel {height:600px;}
+#bl_debug_content {border:5px solid #EA0105; border-bottom:none; background-color:#fff;}
+
+
+/* tables */
+#bl_debug table {font-size:11px;}
+#bl_debug table th {text-align:left; padding:10px; background-color:#ddf1fb;
+    border-bottom:1px dashed #ccc;}
+#bl_debug table td {padding:5px; border-bottom:1px dashed #555;
+    vertical-align:top; text-align:left;}
+#bl_debug table td.bl_col_title {background-color:#f6f6f6; font-weight:bold;
+	border-right:1px dashed #ccc;}
+
+
+/* PANELS*/
+#bl_debug_panels {background-color:#fff;}
+#bl_debug_panels div.bl_debug_panel_active {display:block;}
+#bl_debug .bl_panel_info a {color:#008000; text-decoration:none;}
+.bl_panel_info {width:80%; float:left;}
+.bl_debug_panel {display:none; overflow:auto; height:300px; overflow:auto; }
+.bl_full_panel .bl_debug_panel {display:none; overflow:auto; height:600px; overflow:auto; }
+
+#bl_debug_var_panels,#bl_debug_php_panels, #bl_debug_html_panels {background-color:#fff; overflow:auto;}
+
+.bl_debug_var_panel, .bl_debug_php_panel, .bl_debug_html_panel {display:none; overflow:auto;}
+#bl_debug_var_panels div.bl_debug_var_panel_activo,
+    #bl_debug_php_panels div.bl_debug_php_panel_activo,
+    #bl_debug_html_panels div.bl_debug_html_panel_activo
+        {display:block;}
+
+#bl_debug #bl_debug_info h3, #bl_debug #bl_debug_info p, #bl_debug #bl_debug_info ul {margin-bottom:15px;}
+#bl_debug #bl_debug_info ul {margin-left:15px !important;}
+
+
+/* vertical menus */
+#bl_debug .bl_menu_vertical {background-color:#880400; width:auto;
+     overflow:hidden; min-width: 100px; float:left;}
+#bl_debug .bl_menu_vertical li, .bl_menu_vertical a {display:block;}
+#bl_debug .bl_menu_vertical a {display:block; background-color:#DA1010;
+	padding:3px; border-bottom:1px solid #ea0105; color:#fff;}
+#bl_debug .bl_menu_vertical a:hover {background-color:#C92929;}
+
+#bl_debug_msg_menu a.bl_debug_msg_btn_activo,
+    #bl_debug_var_menu a.bl_debug_var_btn_activo,
+    #bl_debug_php_menu a.bl_debug_php_btn_activo,
+    #bl_debug_html_menu a.bl_debug_html_btn_activo {
+        background-color:#fff; color:#333;}
+#bl_debug_msg_menu a.bl_debug_msg_btn_activo:hover,
+    #bl_debug_var_menu a.bl_debug_var_btn_activo:hover,
+    #bl_debug_php_menu a.bl_debug_php_btn_activo:hover,
+    #bl_debug_html_menu a.bl_debug_html_btn_activo:hover {
+        background-color:#fff; color:#333;
+    }
+
+
+/* VARIOS */
+#bl_debug .in20 {padding:20px;}
+#bl_debug .bl_debug_var_content .no_top_in {padding-top:0 !important;}
+#bl_debug .in10 {padding:10px;}
+#bl_debug .bl_border_top {border-top-left-radius:0.8ex; border-top-right-radius:0.8ex;}
+#bl_debug .bl_right {text-align:right;}
+#bl_debug .bl_nothing p {color:#666 !important; font-size:3em; text-align:center;}
+#bl_debug .bl_opacity {opacity:0.3; filter: alpha(opacity = 30);}
+
+
+/* var box */
+.bl_vars_box {width: 250px; height: 250px; float:left; margin:20px;}
+.bl_vars_box_title {background-color:#222; color:#fff;}
+
+
+#bl_debug td.bl_msg_error {background-color:#ff3333; color:#000;}
+#bl_debug td.bl_msg_warn {background-color:#FF9900; color:#000;}
+#bl_debug td.bl_msg_info {background-color:#3366FF; color:#000;}
+#bl_debug td.bl_msg_user {background-color:#333; color:#000;}
+
+#bl_debug .bl_normal_td .bl_td {background-color:transparent;}
+#bl_debug .bl_hover_td .bl_td {background-color:#999;}
+
+
+/* Formatear mensajes */
+#bl_debug .bl_msg_info {font-weight:bold;}
+#bl_debug .bl_msg_file {font-style:italic;}
+#bl_debug .bl_msg_line {font-style:italic;}
+#bl_debug .bl_msg_separator {color:#f00; margin:0 10px;}
+
+/* MSG TABLE */
+#bl_debug .bl_msg_table tbody tr {display:none;}
+#bl_debug .bl_msg_table tr.bl_highlight_row td.bl_td {background-color:#eee;}
+#bl_debug .bl_msg_table tbody tr.bl_msg_activo {display:table-row;}
+#bl_debug table.bl_backtrace tr {display:table-row;}
+#bl_debug table.bl_backtrace th,
+	#bl_debug table.bl_backtrace td
+		{border-bottom:none; padding:2px}
+
+#bl_memory_box {width:200px;}
+#bl_memory_box, #bl_included {padding:5px; background-color:#f6f6f6; border:1px solid #ccc;
+	float:left; margin:0 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;}
+#bl_memory_box h3, #bl_included	h3 {padding:5px; border-bottom:1px dashed #666; margin-bottom:10px}
+#bl_memory_box span {display:block;}
+
+
+/*  View HTML on vars */
+#bl_debug .bl_view_html {display:none; margin:10px;}
+#bl_debug .bl_view_html_title {width:100px; margin-right:20px; padding:5px; background-color:#ccc;}
+#bl_debug .bl_view_html_content {border:1px solid #ccc; padding:10px;}
+
+#bl_debug_heatmap {text-align:left;}
+
+
+/* AJAX PANEL */
+#bl_debug .bl_ajax_msg {margin-bottom:10px; border-bottom:1px dashed #ccc;  padding:5px;}
+#bl_debug .bl_ajax_msg a {color:#0000ff; margin:0 20px;}
+#bl_debug .bl_ajax_msg span {font-size: small; color:#444;}
+#bl_debug .bl_ajax_msg span.bl_highlight_error {color:#f33;}
+#bl_debug .bl_ajax_request {margin:0 10px 20px;}
+#bl_debug .bl_ajax_response {border:1px solid #ccc; overflow:auto; padding:10px; margin:10px; }
+#bl_debug .bl_ajax_menu {margin:0; padding:0; list-style-type:none; overflow:hidden; margin-top:10px;}
+#bl_debug .bl_ajax_menu li, #bl_debug .bl_ajax_menu a {float:left; display:block;}
+#bl_debug .bl_ajax_menu a {margin:0 5px;padding:3px; background-color:#eee; color:#333; text-decoration:none;}
+#bl_debug .bl_ajax_menu a.bl_active {background-color:#ccc; color:#111}
+#bl_debug .bl_ajax_header {padding:3px; background-color:#dfefff;}
+
+
+#bl_debug .bl_box {width:200px;}
+#bl_debug .bl_box2 {width:400px;}
+#bl_debug .bl_box, #bl_debug .bl_box2, #bl_included {padding:5px; background-color:#f6f6f6; border:1px solid #ccc;
+	float:left; margin:0 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;}
+#bl_debug .bl_box h3, #bl_debug .bl_box2 h3, #bl_included	h3 {
+        padding:5px; border-bottom:1px dashed #666; margin-bottom:10px}
+#bl_debug .bl_box span, #bl_debug .bl_box2 span {display:block;}
+
+
+/*  View HTML on vars */
+#bl_debug .bl_view_html {display:none; margin:10px;}
+#bl_debug .bl_view_html_title {width:100px; margin-right:20px; padding:5px; background-color:#ccc;}
+#bl_debug .bl_view_html_content {border:1px solid #ccc; padding:10px;}
+
+#bl_debug .bl_filter_box {background-color:#f3f3f3; border-radius:3px;
+     width:200px; padding:5px; margin-bottom:5px; border:1px solid #ccc;}
+#bl_debug .bl_filter_box input { border:1px solid #444; }
+
+#bl_show_errors {padding:5px; background-color:#fff; border:2px solid #f00;
+    position:fixed; top:10px; right:10px; display:block; font-size:14px;
+    font-weight:bold;}
+
+#bl_debug .bl_blue {color:#0000FF;}
+#bl_debug .bl_blue strong {color:#0000FF;}
+#bl_debug .bl_grey {color:#999999;}
+#bl_debug .bl_orange {color:#FF6600;}
+
+
+
+/* Intellij Idea-like styling (c) Vasily Polovnyov <vast@whiteants.net> */
+
+#bl_debug pre code {
+  display: block; padding: 0.5em;
+  color: #000;
+  background: #fff;
+}
+
+#bl_debug pre .subst,
+#bl_debug pre .title {
+  font-weight: normal;
+  color: #000;
+}
+
+#bl_debug pre .comment,
+#bl_debug pre .template_comment,
+#bl_debug pre .javadoc,
+#bl_debug pre .diff .header {
+  color: #808080;
+  font-style: italic;
+}
+
+#bl_debug pre .annotation,
+#bl_debug pre .decorator,
+#bl_debug pre .preprocessor,
+#bl_debug pre .doctype,
+#bl_debug pre .pi,
+#bl_debug pre .chunk,
+#bl_debug pre .shebang,
+#bl_debug pre .apache .cbracket,
+#bl_debug pre .input_number {
+  color: #808000;
+}
+
+#bl_debug pre .tag,
+#bl_debug pre .pi {
+  background: #efefef;
+}
+
+#bl_debug pre .tag .title,
+#bl_debug pre .id,
+#bl_debug pre .attr_selector,
+#bl_debug pre .pseudo,
+#bl_debug pre .literal,
+#bl_debug pre .keyword,
+#bl_debug pre .hexcolor,
+#bl_debug pre .css .function,
+#bl_debug pre .ini .title,
+#bl_debug pre .css .class,
+#bl_debug pre .list .title,
+#bl_debug pre .tex .command {
+  font-weight: bold;
+  color: #000080;
+}
+
+#bl_debug pre .attribute,
+#bl_debug pre .rules .keyword,
+#bl_debug pre .number,
+#bl_debug pre .date,
+#bl_debug pre .regexp,
+#bl_debug pre .tex .special {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+#bl_debug pre .number,
+#bl_debug pre .regexp {
+  font-weight: normal;
+}
+
+#bl_debug pre .string,
+#bl_debug pre .value,
+#bl_debug pre .filter .argument,
+#bl_debug pre .css .function .params,
+#bl_debug pre .apache .tag {
+  color: #008000;
+  font-weight: bold;
+}
+
+#bl_debug pre .symbol,
+#bl_debug pre .ruby .symbol .string,
+#bl_debug pre .ruby .symbol .keyword,
+#bl_debug pre .ruby .symbol .keymethods,
+#bl_debug pre .char,
+#bl_debug pre .tex .formula {
+  color: #000;
+  background: #d0eded;
+  font-style: italic;
+}
+
+#bl_debug pre .phpdoc,
+#bl_debug pre .yardoctag,
+#bl_debug pre .javadoctag {
+  text-decoration: underline;
+}
+
+#bl_debug pre .variable,
+#bl_debug pre .envvar,
+#bl_debug pre .apache .sqbracket,
+#bl_debug pre .nginx .built_in {
+  color: #660e7a;
+}
+
+#bl_debug pre .addition {
+  background: #baeeba;
+}
+
+#bl_debug pre .deletion {
+  background: #ffc8bd;
+}
+
+#bl_debug pre .diff .change {
+  background: #bccff9;
+}

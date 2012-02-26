@@ -28,7 +28,7 @@
                   $('#result').html(res);
                }
 
-               $('htm, body').animate({
+               $('html, body').animate({
                   scrollTop: $('#result').offset().top
                });
             });
@@ -101,6 +101,15 @@
             case 'functions' :
                code = '$all = get_defined_functions();\nif(isset($all[\'user\'])) { pr($all[\'user\']); };';
                break;
+            case 'connectdb' :
+               code = "mysql_connect('localhost', 'root', 'root') or die('Could not connect to database');\nmysql_select_db('dbname') or die('Could not select database');\n###################################################################################\n";
+               break;
+            case 'phpbuglost' :
+               code = "// See: http://pbl.elgatonaranja.com\nrequire_once('classes/User/PHPBugLost.0.3/phpBugLost.0.3.php');\n\n//Code Here\n\necho bl_debug();";
+               break;
+            case 'enhancephp' :
+               code = "// See: http://www.enhance-php.com\n// Requires PHP 5.3 or greater\nrequire_once('classes/User/EnhanceTestFramework/EnhanceTestFramework.php');\n\n";
+               break;
             default :
                code = '';
          }
@@ -112,6 +121,70 @@
       });
 
       // for sidebar links end
+
+
+      // Save snippets
+      $('#btnSave').click(function(){
+         var snippet = gEditor.getSession().getValue();
+         if (! snippet) return false;
+
+         var name = prompt('Please enter snippet name');
+         if (! name) return false;
+
+         name = 'pe_snippet' + name;
+         
+         // save now
+         if (typeof window.localStorage != 'object') { alert('Sorry localStorage is not supported by your browser.'); }
+
+         localStorage.setItem(name, snippet);
+
+         if(! localStorage.getItem(name)) { alert('Snippet could not be saved.'); }
+
+         // populate snippets sidebar
+         $('#snippets').html('');
+         for (var i = 0, l = localStorage.length; i < l; i++){
+            if (localStorage.key(i).indexOf('pe_snippet') > -1)
+            {
+               var key = localStorage.key(i);
+               var value = localStorage[key];
+               $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+            }
+         }
+
+         // show snippets sidebar now
+         $('#sidebar ul.navlinks').hide();
+         $('#snippets').slideDown('fast');
+            
+
+      });
+
+      // show clicked snippet
+      $('#snippets li a').live('click', function(){
+         var key = $(this).parent().attr('rel');
+
+         if ($(this).text() === '[X]'){
+            if (confirm('Are you sure to delete this snippet?')){
+               localStorage.removeItem(key);
+               $(this).parent().slideUp('fast');
+               return false;
+            }
+         }
+
+         gEditor.getSession().setValue(localStorage.getItem(key));
+         return false;
+      });
+
+
+      // populate snippets sidebar
+      for (var i = 0, l = localStorage.length; i < l; i++){
+         if (localStorage.key(i).indexOf('pe_snippet') > -1)
+         {
+            var key = localStorage.key(i);
+            var value = localStorage[key];
+            $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+         }
+      }
+      
 
    })(jQuery);
 

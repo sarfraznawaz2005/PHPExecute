@@ -27,20 +27,17 @@
 
             <a class="navhead" href="#">Database</a>
             <ul class="navlinks">
-               <li><a href="#">Connect Database</a></li>
-               <li><a href="#">Table Names</a></li>
-               <li><a href="#">Tables and Fields</a></li>
+               <li><a href="#" rel="connectdb">Connect Database</a></li>
             </ul>
 
             <a class="navhead" href="#">Classes</a>
             <ul class="navlinks">
-               <li><a href="#">PHP Bug Lost</a></li>
+               <li><a href="#" rel="phpbuglost">PHP Bug Lost</a></li>
+               <li><a href="#" rel="enhancephp">EnhanceTestFramework</a></li>
             </ul>
 
             <a class="navhead" href="#">Snippets</a>
-            <ul class="navlinks">
-               <li><a href="#">My Snippet</a></li>
-            </ul>
+            <ul class="navlinks" id="snippets"></ul>
 
           
       </div>
@@ -49,6 +46,7 @@
       <div class="clear"></div>
       <div id="buttons" align="right">
          <input type="button" class="btn btn-blue" value="Execute" id="btnRun" title="Ctrl+Shift" />
+         <input type="button" class="btn btn-blue" value="Save Snippet" id="btnSave" />
          <input type="button" class="btn btn-blue" value="Clear Log" id="btnClearLog" />
          <input type="checkbox" name="append" id="append" /> <label for="append">Append</label>
       </div>      
