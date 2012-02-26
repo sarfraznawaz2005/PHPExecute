@@ -28,8 +28,6 @@
                   $('#result').html(res);
                }
 
-               $('#result').css('color', res.indexOf('gate.php') > -1 ? 'red' : 'black');
-
                $('htm, body').animate({
                   scrollTop: $('#result').offset().top
                });
