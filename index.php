@@ -8,7 +8,7 @@
 <body>
 
    <div id="container" class="clear">
-      <h1 align="left"><img class="left" src="img/terminal.png" align="absmiddle" width="30" height="30" alt="">&nbsp;PHPExecute - PHP Code Runner</h1>
+      <h1 align="left"><a href="index.php"><img class="left" src="img/terminal.png" align="absmiddle" width="30" height="30" alt=""></a>&nbsp;PHPExecute - PHP Code Runner</h1>
 
       <div id="sidebar" class="left">
             <div id="actions">Actions</div>
