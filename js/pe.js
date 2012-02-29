@@ -133,11 +133,17 @@
          name = 'pe_snippet' + name;
          
          // save now
-         if (typeof window.localStorage != 'object') { alert('Sorry localStorage is not supported by your browser.'); }
+         if (typeof window.localStorage != 'object') {
+            alert('Sorry localStorage is not supported by your browser.'); 
+            return false;
+         }
 
          localStorage.setItem(name, snippet);
 
-         if(! localStorage.getItem(name)) { alert('Snippet could not be saved.'); }
+         if(! localStorage.getItem(name)) {
+            alert('Snippet could not be saved.'); 
+            return false;
+         }
 
          // populate snippets sidebar
          $('#snippets').html('');
@@ -175,12 +181,14 @@
 
 
       // populate snippets sidebar
-      for (var i = 0, l = localStorage.length; i < l; i++){
-         if (localStorage.key(i).indexOf('pe_snippet') > -1)
-         {
-            var key = localStorage.key(i);
-            var value = localStorage[key];
-            $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><div class="left">&nbsp;</div><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+      if (typeof window.localStorage != 'undefined') {
+         for (var i = 0, l = localStorage.length; i < l; i++){
+            if (localStorage.key(i).indexOf('pe_snippet') > -1)
+            {
+               var key = localStorage.key(i);
+               var value = localStorage[key];
+               $('#snippets').append('<li rel="' + key + '"><a class="left" title="Delete" href="#">[X]</a><div class="left">&nbsp;</div><a href="#">' + key.replace('pe_snippet', '') + '</a></li>');
+            }
          }
       }
       
