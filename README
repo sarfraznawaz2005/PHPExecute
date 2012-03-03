@@ -6,8 +6,8 @@ LICENSE  : MIT
 ================================================================
 
 
-##WHAT IS PHPExecute?
-
+WHAT IS PHPExecute?
+____________________________________________
 
 PHPExecute is the fastest way to run/test/debug your PHP code. Here are some of the cool things about it:
 
@@ -19,11 +19,13 @@ PHPExecute is the fastest way to run/test/debug your PHP code. Here are some of 
  - Adding useful classes
  - Easy to extend as per your needs
  
-##Extending PHPExecute
+Extending PHPExecute
+____________________________________________
 
 The good thing is that you can download (see below) it, see its source code and extend it however you like according to your needs. For example, you can add classes for testing, performance or any other purpose. One can even integrate bash commands (I am not going into details of that) to make it even more useful tool to work with.
 
-##Usage Notes
+Usage Notes
+____________________________________________
 
  - PHPExecute uses eval function to run the code. It is strongly recommended that you should use that tool for local testing only and not on production server due to security reasons. If you do, you use it on your own risk.
  
