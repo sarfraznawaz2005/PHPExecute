@@ -1,4 +1,0 @@
-ajax loading while running code
-snipt.net or similar integration
-unit testing framework implementation
-php code coverage
