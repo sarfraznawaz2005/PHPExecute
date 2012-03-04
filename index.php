@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>PHPExecute</title>
+<meta name="author" content="Sarfraz Ahmed (http://sarfraznawaz.wordpress.com)">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
