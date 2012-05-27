@@ -33,6 +33,7 @@
 
             <a class="navhead" href="#">Classes</a>
             <ul class="navlinks">
+               <li><a href="#" rel="phpquery">PHPQuery</a></li>
                <li><a href="#" rel="phpbuglost">PHP Bug Lost</a></li>
                <li><a href="#" rel="enhancephp">EnhanceTestFramework</a></li>
             </ul>

@@ -103,6 +103,9 @@
             case 'connectdb' :
                code = "mysql_connect('localhost', 'root', 'root') or die('Could not connect to database');\nmysql_select_db('dbname') or die('Could not select database');\n###################################################################################\n";
                break;
+            case 'phpquery' :
+               code = "// See: http://code.google.com/p/phpquery/\nrequire_once('classes/User/phpQuery/phpQuery/phpQuery.php');\n\n$html = file_get_contents('http://www.bbc.co.uk/sport/football/results');\n$doc = phpQuery::newDocumentHTML($html);\n$resultData = pq('div#results-data');\necho $resultData;";
+               break;                              
             case 'phpbuglost' :
                code = "// See: http://pbl.elgatonaranja.com\nrequire_once('classes/User/PHPBugLost.0.3/phpBugLost.0.3.php');\n\n//Code Here\n\necho bl_debug();";
                break;
