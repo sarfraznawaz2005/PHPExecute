@@ -22,7 +22,7 @@ PHPExecute is the fastest way to run/test/debug your PHP code. Here are some of 
 Extending PHPExecute
 ____________________________________________
 
-The good thing is that you can download (see below) it, see its source code and extend it however you like according to your needs. For example, you can add classes for testing, performance or any other purpose. One can even integrate bash commands (I am not going into details of that) to make it even more useful tool to work with.
+The good thing is that you can download it, see its source code and extend it however you like according to your needs. For example, you can add classes for testing, performance or any other purpose. One can even integrate bash commands to make it even more useful tool to work with.
 
 Usage Notes
 ____________________________________________
@@ -32,3 +32,8 @@ ____________________________________________
  - In order to save snippets, PHPExecute uses localStorage feature which is available in latest browsers (and IE9+) only and also it can be around 5MB in size. This isn’t that ideal of you are going to save a lot of snippets but you can always extend PHPExecute to add database support and save your snippets there.
  
  - The custom functions that can be used in PHPExecute can be found in includes/functions.php file. You can add any functions in that file that you want to use directly inside PHPExecute. The custom functions can also be seen in PHP Info > User Defined Functions.
+
+TODO
+____________________________________________
+
+ - Add support to save snippets online
