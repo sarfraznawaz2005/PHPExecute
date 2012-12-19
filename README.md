@@ -18,11 +18,13 @@ PHPExecute is the fastest way to run/test/debug your PHP code. Here are some of 
  - Adding useful classes
  - Easy to extend as per your needs
  
+____________________________________________
 Extending PHPExecute
 ____________________________________________
 
 The good thing is that you can download it, see its source code and extend it however you like according to your needs. For example, you can add classes for testing, performance or any other purpose. One can even integrate bash commands to make it even more useful tool to work with.
 
+____________________________________________
 Usage Notes
 ____________________________________________
 
@@ -32,6 +34,7 @@ ____________________________________________
  
  - The custom functions that can be used in PHPExecute can be found in includes/functions.php file. You can add any functions in that file that you want to use directly inside PHPExecute. The custom functions can also be seen in PHP Info > User Defined Functions.
 
+____________________________________________
 TODO
 ____________________________________________
 
