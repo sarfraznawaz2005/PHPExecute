@@ -1,9 +1,8 @@
-================================================================
-Author   : Sarfraz Ahmed (sarfraznawaz2005@gmail.com)
-Twitter  : @sarfraznawaz
-Blog     : http://sarfraznawaz.wordpress.com/
+Author   : Sarfraz Ahmed (sarfraznawaz2005@gmail.com)  
+Twitter  : @sarfraznawaz  
+Blog     : http://sarfraznawaz.wordpress.com/  
 LICENSE  : MIT
-================================================================
+____________________________________________
 
 
 WHAT IS PHPExecute?
