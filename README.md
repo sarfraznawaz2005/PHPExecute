@@ -1,3 +1,8 @@
+#Note
+**This project has been abandoned in favor of much better [Phexecute][1]**
+
+---
+
 Author   : Sarfraz Ahmed (sarfraznawaz2005@gmail.com)  
 Twitter  : @sarfraznawaz  
 Blog     : http://sarfraznawaz.wordpress.com/  
@@ -38,3 +43,4 @@ ____________________________________________
  
  - The custom functions that can be used in PHPExecute can be found in includes/functions.php file. You can add any functions in that file that you want to use directly inside PHPExecute. The custom functions can also be seen in PHP Info > User Defined Functions.
 
+ [1]: https://github.com/sarfraznawaz2005/Phexecute
